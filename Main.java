@@ -64,7 +64,7 @@ public class Main {
         return map;
     }
 
-    public static void writeLines(HashMap<String, Integer> map, String filePath) throws IOException {
+    public static void writeLines(String filePath, HashMap<String, Integer> map) throws IOException {
         /*
          * PrintWriter ha un'interfaccia simile a quella di System.out
          */
@@ -85,7 +85,7 @@ public class Main {
         try {
             List<String> fileLines = loadLines("input.txt");
             HashMap<String, Integer> processedMap = processLines(fileLines);
-            writeLines(processedMap, "output.txt");
+            writeLines("output.txt", processedMap);
         } catch (IOException e) {
             e.printStackTrace();
         }
